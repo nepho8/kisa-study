@@ -1,0 +1,20 @@
+<head>
+  <title>simple</title>
+</head>
+
+<body>
+  <h1>Welcome to My Wallet!</h1>
+
+  {{> hello}}
+  {{> info}}
+</body>
+
+<template name="hello">
+  <h2>14UndM4GZNgtit3EHax6zyM2KyRA6mPF1E</h2>
+  <h2>Wallet: {{balance}} BTC</h2>
+  <button>Click Me</button>
+</template>
+
+<template name="info">
+  <h2>Learn Meteor!</h2>
+</template>
