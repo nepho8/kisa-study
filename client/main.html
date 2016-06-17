@@ -1,20 +1,87 @@
 <head>
-  <title>simple</title>
+    <title>simple</title>
 </head>
 
 <body>
-  <h1>Welcome to My Wallet!</h1>
-
-  {{> hello}}
-  {{> info}}
+    {{> hello}}
 </body>
-
 <template name="hello">
-  <h2>12c6DSiU4Rq3P4ZxziKxzrL5LmMBrzjrJX</h2>
-  <h2>Wallet: {{balance}} BTC</h2>
-  <button>Click Me</button>
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Bitcoin fountain</h3>
+        </div>
+        <div class="jumbotron">
+            <center>
+                <h3 id="pick_address">{{pickAddress}}</h3>
+                <h1>비트코인 분수대</h1>
+                <div id="qrcode"></div>
+                <p class="lead">{{bitcoinAddress}}</p>
+                <p>
+                    <button id="find" type="button" class="btn btn-primary">찾는다</button>
+                    <button id="pick" type="button" class="btn btn-primary">뽑는다.</button>
+                    <button id="send" type="button" class="btn btn-primary">송금한다.</button>
+                </p>
+                <p>
+                    {{#if withdrawList}}
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>TXID</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each withdrawList}}
+                                <tr>
+                                    <td></td>
+                                    <td>{{transaction_hash}}</td>
+                                    <td>{{value}} BTC</td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                    {{/if}}
+                </p>
+            </center>
+        </div>
+        <div class="row marketing">
+            <div class="col-lg-6">
+                <h4>Subheading1</h4>
+                <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+                <h4>Subheading2</h4>
+                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+                <h4>Subheading3</h4>
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            </div>
+            <div class="col-lg-6">
+                <h4>Subheading4</h4>
+                <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+                <h4>Subheading5</h4>
+                <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+                <h4>Subheading6</h4>
+                <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>&copy; 2016 Company, Inc.</p>
+        </footer>
+    </div>
+    <!-- /container -->
 </template>
-
 <template name="info">
-  <h2>Learn Meteor!</h2>
+    <h2>Learn Meteor!</h2>
+    <ul>
+        <li><a href="https://www.meteor.com/try">Do the Tutorial</a></li>
+        <li><a href="http://guide.meteor.com">Follow the Guide</a></li>
+        <li><a href="https://docs.meteor.com">Read the Docs</a></li>
+        <li><a href="https://forums.meteor.com">Discussions</a></li>
+    </ul>
 </template>

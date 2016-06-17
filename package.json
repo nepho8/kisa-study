@@ -1,5 +1,5 @@
 {
-  "name": "hello",
+  "name": "kisa-study-4",
   "private": true,
   "scripts": {
     "start": "meteor run"
