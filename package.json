@@ -1,10 +1,12 @@
 {
-  "name": "hello",
+  "name": "kisa-study-5",
   "private": true,
   "scripts": {
     "start": "meteor run"
   },
   "dependencies": {
-    "meteor-node-stubs": "~0.2.0"
+    "bitcoin-address": "^0.3.0",
+    "meteor-node-stubs": "^0.2.3",
+    "qrcodesvg": "^1.0.2"
   }
 }
